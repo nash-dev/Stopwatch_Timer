@@ -10,7 +10,7 @@ function App() {
   
     let interval,interval2,interval3;
     if (isRunning) {
-      interval = setInterval(() => {
+      interval = setInterval(async() => {
         setTime((prevTime) => {
         if(prevTime === 59){
          // Math.floor(minutes/2);
