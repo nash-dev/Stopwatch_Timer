@@ -1,0 +1,28 @@
+
+body{
+    background-color: chartreuse;
+    color: azure;
+    box-sizing: calc();
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-display: swap;
+    font-style: normal;
+    font-size: medium;
+    border-color: darkviolet;
+    border: chocolate;
+    margin-inline-start: 20%;
+    margin-right: 30%;
+    -ms-grid-column-align: center;
+    border-block-color: initial;
+    text-shadow: 45%;
+}
+
+:hover{
+    color-interpolation-filters: auto;
+}
+.timer{
+    text-align: left;
+    text-size-adjust: inherit;
+}
+
+:start{display: block;}
