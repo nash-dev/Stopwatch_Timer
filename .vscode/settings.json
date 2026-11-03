@@ -1,4 +1,7 @@
 {
     "debug.confirmOnExit": "always",
-    "terminal.integrated.confirmOnExit": "hasChildProcesses"
+    "terminal.integrated.confirmOnExit": "hasChildProcesses",
+    "cSpell.words": [
+        "vite"
+    ]
 }

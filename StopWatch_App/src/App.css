@@ -1,5 +1,5 @@
 .counter {
-  font-size: 16px;
+  font-size: 18px;
   padding: 5px 10px;
   border-radius: 5px;
   color: var(--accent);
@@ -7,7 +7,6 @@
   border: 2px solid transparent;
   transition: border-color 0.3s;
   margin-bottom: 24px;
-
   &:hover {
     border-color: var(--accent-border);
   }
@@ -16,28 +15,55 @@
     outline-offset: 2px;
   }
 }
+.circle{
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 120px;;
+  left: 40;
+  border-radius: 60%;
+  background-color: var(--accent-bg);
+  display: flex;
+  transform: translate(-40,-50%);
+  /*
+  animation: effects 1s linear infinite;
+*/
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: var(--accent);
+  margin-bottom: 30px;
+  padding: 10px;
+  border: 6px solid rgba(255,0,255,1);
+  border: top-color #fff;
+  transition: border-color 1s;
+}
+@keyframes effects{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 .hero {
   position: relative;
-
   .base,
   .framework,
   .vite {
     inset-inline: 0;
     margin: 0 auto;
   }
-
   .base {
     width: 170px;
     position: relative;
     z-index: 0;
   }
-
   .framework,
   .vite {
     position: absolute;
   }
-
   .framework {
     z-index: 1;
     top: 34px;
@@ -45,7 +71,6 @@
     transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
       scale(1.4);
   }
-
   .vite {
     z-index: 0;
     top: 107px;
@@ -55,12 +80,11 @@
       scale(0.8);
   }
 }
-
 #center {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  place-content: center;
+  place-content: right;
   place-items: center;
   flex-grow: 1;
 
@@ -68,6 +92,12 @@
     padding: 32px 20px 24px;
     gap: 18px;
   }
+}
+#right {
+   display: flex;
+   flex-direction: column-reverse;
+   place-content: right;
+   place-items: right;
 }
 
 #next-steps {
