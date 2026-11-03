@@ -66,9 +66,13 @@ function App() {
           <button type="button" className='counter' onClick={handleReset}>Reset</button>
           <button type="button" className='counter' onClick={handleStop}>Stop</button>
         </div>
-          <div className='counter'>
-            <label>Timer is  <br></br> <br/> {hours}:{minutes}:{secondsDisplay}<br></br></label>
-          </div>
+        
+          <div className='circle'></div>
+            <div className='circle-inner'>
+              <span>Timer is  <br></br> <br/> {hours}:{minutes}:{secondsDisplay}<br></br></span>
+            </div>
+          
+          
       </section>
       <div className="ticks"></div>
       <div className="ticks"></div>
