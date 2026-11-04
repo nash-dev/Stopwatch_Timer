@@ -72,8 +72,6 @@ function App() {
             <button type="button" className='counter' onClick={handleStop}>Stop</button>
             </colgroup>
           <Col  className="position-absolute top-0 start-50 translate-middle-x">
-          <div className="circle">
-          </div>
           <div className='circle-inner'>
           <span>Timer is  <br></br> <br/> {hours}:{minutes}:{secondsDisplay}<br></br></span>
           </div>

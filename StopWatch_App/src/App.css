@@ -21,7 +21,7 @@
   width: 150px;
   height: 150px;
   top: 120px;;
-
+  left: 50%;
   border-radius: 60%;
   background-color: var(--accent-bg);
   display: flex;
