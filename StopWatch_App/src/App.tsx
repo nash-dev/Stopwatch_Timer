@@ -9,9 +9,9 @@ function App() {
   //const [minutes, setMinutes] = useState(0)
   //const [hour, setHours] = useState(0)
   const [isRunning, setIsRunning] = useState(false)
-  const hours = Math.floor(seconds / 3600);
-  const minutes = Math.floor((seconds % 3600) / 60);
-  const secondsDisplay = seconds % 60;
+  const hours = Math.max(0, Math.floor(seconds / 3600));
+  const minutes = Math.max(0,Math.floor((seconds % 3600) / 60));
+  const secondsDisplay = Math.max(0, seconds % 60);
 
   //const [isPaused, setIsPaused] = useState(false)
   useEffect(() => {
