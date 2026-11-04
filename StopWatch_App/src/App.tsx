@@ -54,7 +54,7 @@ function App() {
   return (
     <>
       <section id="center">
-        
+        <div className="border border-primary">
         <div className="Container" >
         
     <header>
@@ -63,19 +63,24 @@ function App() {
 
         <div className='counter'>
           <colgroup>
-     
-              <button type="button" className='counter' onClick={handleLap}>Lap Number {count}</button>
+          <button type="button" className='position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary' onClick={handleLap}>Lap Number {count}</button>
             <button type="button" className='counter' onClick={handleStart}>Start</button>
             <button type="button" className='counter' onClick={handleResume}>Resume</button>
             <button type="button" className='counter' onClick={handlePause}>Pause</button>
             <button type="button" className='counter' onClick={handleReset}>Reset</button>
             <button type="button" className='counter' onClick={handleStop}>Stop</button>
-            </colgroup>
-          <Col  className="position-absolute top-0 start-50 translate-middle-x">
+            
+          <Col>
+          <div>
+            <div className='circle'></div>
+          </div>
+ 
           <div className='circle-inner'>
           <span>Timer is  <br></br> <br/> {hours}:{minutes}:{secondsDisplay}<br></br></span>
           </div>
           </Col>
+          </colgroup>
+        </div>
         </div>
         </div>
       </section>
