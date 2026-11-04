@@ -57,20 +57,20 @@ function App() {
         
         <div className="Container" >
         
-        <div className='position-absolute top-0 start-50 translate-middle-x'>
+    <header>
           <h3 className='counter'>Timer Application</h3>
-        </div>
+  </header>
+
         <div className='counter'>
           <colgroup>
      
-           <p className="text-center">
               <button type="button" className='counter' onClick={handleLap}>Lap Number {count}</button>
             <button type="button" className='counter' onClick={handleStart}>Start</button>
             <button type="button" className='counter' onClick={handleResume}>Resume</button>
             <button type="button" className='counter' onClick={handlePause}>Pause</button>
             <button type="button" className='counter' onClick={handleReset}>Reset</button>
             <button type="button" className='counter' onClick={handleStop}>Stop</button>
-            </p>
+            </colgroup>
           <Col  className="position-absolute top-0 start-50 translate-middle-x">
           <div className="circle">
           </div>
@@ -78,7 +78,6 @@ function App() {
           <span>Timer is  <br></br> <br/> {hours}:{minutes}:{secondsDisplay}<br></br></span>
           </div>
           </Col>
-          </colgroup>
         </div>
         </div>
       </section>
