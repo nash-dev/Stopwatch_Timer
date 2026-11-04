@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import { useEffect, useState } from 'react';
+import { Col } from 'react-bootstrap';
 import './App.css';
 
 function App() {
@@ -53,26 +54,33 @@ function App() {
   return (
     <>
       <section id="center">
-        <div className="hero">
-        </div>
-        <div>
+        
+        <div className="Container" >
+        
+        <div className='position-absolute top-0 start-50 translate-middle-x'>
           <h3 className='counter'>Timer Application</h3>
         </div>
         <div className='counter'>
-          <button type="button" className='counter' onClick={handleLap}>Lap Number {count}</button>
-          <button type="button" className='counter' onClick={handleStart}>Start</button>
-          <button type="button" className='counter' onClick={handleResume}>Resume</button>
-          <button type="button" className='counter' onClick={handlePause}>Pause</button>
-          <button type="button" className='counter' onClick={handleReset}>Reset</button>
-          <button type="button" className='counter' onClick={handleStop}>Stop</button>
+          <colgroup>
+     
+           <p className="text-center">
+              <button type="button" className='counter' onClick={handleLap}>Lap Number {count}</button>
+            <button type="button" className='counter' onClick={handleStart}>Start</button>
+            <button type="button" className='counter' onClick={handleResume}>Resume</button>
+            <button type="button" className='counter' onClick={handlePause}>Pause</button>
+            <button type="button" className='counter' onClick={handleReset}>Reset</button>
+            <button type="button" className='counter' onClick={handleStop}>Stop</button>
+            </p>
+          <Col  className="position-absolute top-0 start-50 translate-middle-x">
+          <div className="circle">
+          </div>
+          <div className='circle-inner'>
+          <span>Timer is  <br></br> <br/> {hours}:{minutes}:{secondsDisplay}<br></br></span>
+          </div>
+          </Col>
+          </colgroup>
         </div>
-        
-          <div className='circle'></div>
-            <div className='circle-inner'>
-              <span>Timer is  <br></br> <br/> {hours}:{minutes}:{secondsDisplay}<br></br></span>
-            </div>
-          
-          
+        </div>
       </section>
       <div className="ticks"></div>
       <div className="ticks"></div>
