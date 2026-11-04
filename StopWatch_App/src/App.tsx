@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import { useEffect, useState } from 'react';
-import { Col } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import './App.css';
 
 function App() {
@@ -70,7 +70,7 @@ function App() {
             <button type="button" className='counter' onClick={handleReset}>Reset</button>
             <button type="button" className='counter' onClick={handleStop}>Stop</button>
             
-          <Col>
+          <Row>
           <div>
             <div className='circle'></div>
           </div>
@@ -78,7 +78,7 @@ function App() {
           <div className='circle-inner'>
           <span>Timer is  <br></br> <br/> {hours}:{minutes}:{secondsDisplay}<br></br></span>
           </div>
-          </Col>
+          </Row>
           </colgroup>
         </div>
         </div>
