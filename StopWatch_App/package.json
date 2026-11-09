@@ -7,14 +7,16 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start":"node index.html"
   },
   "dependencies": {
     "bootstrap": "^5.3.8",
     "react": "^19.3.1",
     "react-bootstrap": "^2.10.10",
     "react-dom": "^19.3.1",
-    "tslib": "^2.8.1"
+    "tslib": "^2.8.1",
+    "use-persisted-state": "^0.3.3"
   },
   "devDependencies": {
     "@types/node": "^24.19.2",
