@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import { useEffect, useState } from 'react';
-import { Row } from 'react-bootstrap';
 import './App.css';
 
 function App() {
@@ -12,7 +11,7 @@ function App() {
   const secondsDisplay = Math.max(0, seconds % 60);
   const [clickedLap, setClickedLap] = useState<number | null>(null);
   const [clickLapMinute, setClickedLapMinute] = useState<number | null>(null);
-  const [clickLapHour, setClickedLapHour] = useState<number | 0>();
+  const [clickLapHour, setClickedLapHour] = useState<number | null>(null);
   
   //const timer = useRef([hours,minutes,secondsDisplay]);
   //const lap = [hours,minutes,seconds];
@@ -84,7 +83,7 @@ function App() {
             <button type="button" className='counter' onClick={handlePause}>Pause</button>
             <button type="button" className='counter' onClick={handleReset}>Reset</button>
             <button type="button" className='counter' onClick={handleStop}>Stop</button>
-          <Row>
+          
           <div>
             <div className='circle'></div>
           </div>
@@ -92,28 +91,8 @@ function App() {
           <span>Timer is<br/> {hours}:{minutes}:{secondsDisplay}<br></br></span>
           </div>
           
-          <ul>
-            {clickLapHour &&(
-            <li>
-                <p>The Last Lap:{clickLapHour.toString()} Hour</p>
-                <p></p>
-            </li>
-            )}
-            {clickLapMinute &&(
-            <li>
-                <p>The Last Lap:{clickLapMinute.toString()} Minutes</p>
-                <p></p>
-            </li>
-            )}
-            {clickedLap &&(
-            <li>
-                <p>The Last Lap:{clickedLap.toString()} Seconds</p>
-                <p></p>
-            </li>
-            )}
-          </ul>
 
-          </Row>
+          
           </colgroup>
         </div>
         </div>
