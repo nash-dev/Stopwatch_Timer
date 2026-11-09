@@ -9,9 +9,9 @@ function App() {
   const hours = Math.max(0, Math.floor(seconds / 3600));
   const minutes = Math.max(0,Math.floor((seconds % 3600) / 60));
   const secondsDisplay = Math.max(0, seconds % 60);
-  const [clickedLap, setClickedLap] = useState<number | null>(null);
-  const [clickLapMinute, setClickedLapMinute] = useState<number | null>(null);
-  const [clickLapHour, setClickedLapHour] = useState<number | null>(null);
+  //const [clickedLap, setClickedLap] = useState<number | null>(null);
+  //const [clickLapMinute, setClickedLapMinute] = useState<number | null>(null);
+  //const [clickLapHour, setClickedLapHour] = useState<number | null>(null);
   
   //const timer = useRef([hours,minutes,secondsDisplay]);
   //const lap = [hours,minutes,seconds];
@@ -29,15 +29,6 @@ function App() {
     },[isRunning]
   );
   //const logLap = [];
-  const handleLapTimes = () =>{
-    setClickedLap(secondsDisplay);
-  }
-  const handleLapMin = () =>{
-    setClickedLapMinute(minutes);
-  }
-  const handleLapHour = () =>{
-    setClickedLapHour(hours);
-  }
   const handleStart = () => {
     setIsRunning(true);
   };
@@ -77,7 +68,7 @@ function App() {
     </header>
         <div className='counter'>
           <colgroup>
-          <button type="button" className='position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary' onClick={()=>{handleLap();handleLapTimes();handleLapMin();handleLapHour();}}>Lap Number {count}</button>
+          <button type="button" className='position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary' onClick={()=>{handleLap()}}>Lap Number {count}</button>
             <button type="button" className='counter' onClick={handleStart}>Start</button>
             <button type="button" className='counter' onClick={handleResume}>Resume</button>
             <button type="button" className='counter' onClick={handlePause}>Pause</button>
@@ -91,6 +82,7 @@ function App() {
           <span>Timer is<br/> {hours}:{minutes}:{secondsDisplay}<br></br></span>
           </div>
           
+
 
           
           </colgroup>
