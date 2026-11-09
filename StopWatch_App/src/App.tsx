@@ -76,7 +76,6 @@ function App() {
     <header>
           <h3 className='counter'>Timer Application</h3>
     </header>
-
         <div className='counter'>
           <colgroup>
           <button type="button" className='position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary' onClick={()=>{handleLap();handleLapTimes();handleLapMin();handleLapHour();}}>Lap Number {count}</button>
