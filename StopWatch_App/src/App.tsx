@@ -89,8 +89,12 @@ function App() {
             {clickedLap !== null && clickedLap !==undefined && clickLapMinute !== null && clickLapMinute !==undefined&&
             clickLapHour !== null && clickLapHour!==undefined&&(
             <li>
-                <p>The Last Lap:{String(clickLapHour)}:{String(clickLapMinute)}:{String(clickedLap)} Seconds</p>
                 <p></p>
+                <p></p>
+                <br></br>
+                <br></br>
+                <p>The Last Lap:{String(clickLapHour)} Hour/s :{String(clickLapMinute)} Minute/s :{String(clickedLap)} Second/s</p>
+                
             </li>
             )}
           </ul>
