@@ -10,8 +10,8 @@ function App() {
   const minutes = Math.max(0,Math.floor((seconds % 3600) / 60));
   const secondsDisplay = Math.max(0, seconds % 60);
   const [clickedLap, setClickedLap] = useState<number | null>(null);
-  const [clickLapMinute, setClickedLapMinute] = useState<number | null>(null);
-  const [clickLapHour, setClickedLapHour] = useState<number | null>(null);
+  //const [clickLapMinute, setClickedLapMinute] = useState<number | null>(null);
+  //const [clickLapHour, setClickedLapHour] = useState<number | null>(null);
   
   //const timer = useRef([hours,minutes,secondsDisplay]);
   //const lap = [hours,minutes,seconds];
@@ -31,12 +31,6 @@ function App() {
   //const logLap = [];
   const handleLapTimes = () =>{
     setClickedLap(secondsDisplay);
-  }
-  const handleLapMin = () =>{
-    setClickedLapMinute(minutes);
-  }
-  const handleLapHour = () =>{
-    setClickedLapHour(hours);
   }
   const handleStart = () => {
     setIsRunning(true);
@@ -77,7 +71,7 @@ function App() {
     </header>
         <div className='counter'>
           <colgroup>
-          <button type="button" className='position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary' onClick={()=>{handleLap();handleLapTimes();handleLapMin();handleLapHour();}}>Lap Number {count}</button>
+          <button type="button" className='position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary' onClick={()=>{handleLapTimes();}}>Lap Number {count}</button>
             <button type="button" className='counter' onClick={handleStart}>Start</button>
             <button type="button" className='counter' onClick={handleResume}>Resume</button>
             <button type="button" className='counter' onClick={handlePause}>Pause</button>
@@ -92,18 +86,6 @@ function App() {
           </div>
           
           <ul>
-            {clickLapHour !==null && clickLapHour !== undefined &&(
-            <li>
-                <p>The Last Lap:{String(clickLapHour)} Hour</p>
-                <p></p>
-            </li>
-            )}
-            {clickLapMinute !==null && clickLapMinute !==undefined &&(
-            <li>
-                <p>The Last Lap:{String(clickLapMinute)} Minutes</p>
-                <p></p>
-            </li>
-            )}
             {clickedLap !== null && clickedLap !==undefined &&(
             <li>
                 <p>The Last Lap:{String(clickedLap)} Seconds</p>
@@ -123,3 +105,4 @@ function App() {
     </>
 );}
 export default App
+
