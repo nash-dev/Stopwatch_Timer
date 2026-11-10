@@ -56,9 +56,6 @@ function App() {
     //setHours(0);
     setCount(0);
   } 
-  const handleLap = () => {
-    setCount((count) => count + 1);    
-  }
 
   return (
     <>
