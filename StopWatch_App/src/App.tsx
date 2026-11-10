@@ -78,9 +78,7 @@ function App() {
             <button type="button" className='counter' onClick={handleReset}>Reset</button>
             <button type="button" className='counter' onClick={handleStop}>Stop</button>
           
-          <div>
             <div className='circle'></div>
-          </div>
           <div className='circle-inner'>
           <span>Timer is<br/> {hours}:{minutes}:{secondsDisplay}<br></br></span>
           </div>
@@ -91,6 +89,8 @@ function App() {
             <li>
                 <p></p>
                 <p></p>
+                <p></p>
+                <br></br>
                 <br></br>
                 <br></br>
                 <p>The Last Lap:{String(clickLapHour)} Hour/s :{String(clickLapMinute)} Minute/s :{String(clickedLap)} Second/s</p>
